@@ -1,11 +1,12 @@
 @import '../variables';
+@import '../utils';
 
 .mega-menu-catalogue {
   &__categories {
     border-right: 1px solid $black;
     padding: 15px;
     flex: 45;
-    background-color: $gray-a;
+    background-color: $gray;
     @include viewport('lg') {
       flex: 2;
       background-color: $white;

@@ -5,35 +5,15 @@ $mb-large: 1200px;
 
 // COLOR PALETTE
 $black: #000;
-$gray-a: #f4f4f4;
+$black-b: #3a2e2c;
+$gray: #f4f4f4;
 $white: #fff;
 
 // Z-INDEX
 $mega-menu-index: 100;
 $mobile-menu-index: 100;
+$backdrop-index: 90;
 
 // LAYOUT
 $site-width: 960px;
 $main-bar-height: 60px;
-
-
-// Breakpoints mixin
-@mixin viewport($media) {
-  @if $media == sm {
-    @media only screen and (max-width: $mb-small - 1) {
-      @content;
-    }
-  } @else if $media == md {
-    @media only screen and (min-width: $mb-small) {
-      @content;
-    }
-  } @else if $media == lg {
-    @media only screen and (min-width: $mb-medium) {
-      @content;
-    }
-  } @else if $media == xl {
-    @media only screen and (min-width: $mb-large) {
-      @content;
-    }
-  }
-}

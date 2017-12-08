@@ -5,10 +5,13 @@ import Components from './components/components';
 import AppComponent from './app.component';
 import AppService from './app.service';
 
+import 'angular-ui-swiper';
+
 angular.module('app', [
   uiRouter,
   Common,
-  Components
+  Components,
+  'ui.swiper'
 ])
   .config(['$locationProvider', ($locationProvider) => {
     $locationProvider.html5Mode(true).hashPrefix('!');

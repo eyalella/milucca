@@ -1,7 +1,22 @@
 @import './variables';
 
-// LAYOUT
-.content-wrapper {
-  width: 100%;
-  max-width: $site-width;
+// Breakpoints mixin
+@mixin viewport($media) {
+  @if $media == sm {
+    @media only screen and (max-width: $mb-small - 1) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: $mb-small) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: $mb-medium) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (min-width: $mb-large) {
+      @content;
+    }
+  }
 }
