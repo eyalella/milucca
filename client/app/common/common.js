@@ -1,8 +1,14 @@
 import angular from 'angular';
-import Navbar from './navbar/navbar';
+import TopBar from './top-bar/top-bar';
+import Search from './search/search';
+import MegaMenu from './mega-menu/mega-menu';
+import MegaMenuCatalog from './mega-menu-catalog/mega-menu-catalog';
 
 let commonModule = angular.module('app.common', [
-  Navbar
+  TopBar,
+  Search,
+  MegaMenu,
+  MegaMenuCatalog
 ]).name;
 
 export default commonModule;

@@ -1,0 +1,25 @@
+@import '../variables';
+
+.mega-menu-catalogue {
+  &__categories {
+    border-right: 1px solid $black;
+    padding: 25px;
+    flex: 2;
+  }
+  &__category {
+    font-size: 21px;
+    text-transform: uppercase;
+  }
+  &__sub-categories {
+    border-right: 1px solid $black;
+    padding: 25px;
+    flex: 5;
+  }
+  &__sub-category-title {
+    font-size: 21px;
+    text-transform: capitalize;
+  }
+  &__more-section {
+    flex: 3;
+  }
+}

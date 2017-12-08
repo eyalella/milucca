@@ -1,6 +1,27 @@
 @import "common/common";
 
+app {
+  height: 100%;
+  display: block;
+}
+
+mega-menu {
+  width: 100%;
+  max-width: $site-width;
+  background: $white;
+  z-index: $mega-menu-index;
+  left: 50%;
+  transform: translateX(-50%);
+  @include viewport('lg') {
+    position: absolute;
+  }
+}
+
 .app {
   height: 100%;
+  &__page-wrapper {
+    height: 100%;
+    position: relative;
+  }
 }
 

@@ -1,3 +1,24 @@
+// Breakpoints mixin
+@mixin viewport($media) {
+  @if $media == sm {
+    @media only screen and (max-width: $mb-small - 1) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: $mb-small) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: $mb-medium) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (min-width: $mb-large) {
+      @content;
+    }
+  }
+}
+
 // MEDIA BREAKPOINTS
 $mb-small: 768px;
 $mb-medium: 992px;
@@ -5,3 +26,11 @@ $mb-large: 1200px;
 
 // COLOR PALETTE
 $black: #000;
+$white: #fff;
+
+// Z-INDEX
+$mega-menu-index: 100;
+$mobile-menu-index: 100;
+
+// LAYOUT
+$site-width: 960px;
