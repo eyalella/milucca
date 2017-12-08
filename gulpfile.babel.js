@@ -1,21 +1,16 @@
 'use strict';
 
-import gulp     from 'gulp';
-import webpack  from 'webpack';
-import path     from 'path';
-import sync     from 'run-sequence';
-import rename   from 'gulp-rename';
-import template from 'gulp-template';
-import fs       from 'fs';
-import yargs    from 'yargs';
-import lodash   from 'lodash';
-import gutil    from 'gulp-util';
-import serve    from 'browser-sync';
-import del      from 'del';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
-import colorsSupported      from 'supports-color';
-import historyApiFallback   from 'connect-history-api-fallback';
+const gulp = require('gulp');
+const webpack = require('webpack');
+const path = require('path');
+const gutil = require('gulp-util');
+const serve = require('browser-sync');
+const del = require('del');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const colorsSupported = require('supports-color');
+const historyApiFallback = require('connect-history-api-fallback');
+const merge = require('webpack-merge');
 
 let root = 'client';
 
@@ -37,7 +32,6 @@ let paths = {
     path.join(root, 'index.html')
   ],
   entry: [
-    'babel-polyfill',
     path.join(__dirname, root, 'app/app.js')
   ],
   output: root,
@@ -52,10 +46,10 @@ gulp.task('webpack', ['clean'], (cb) => {
 
   webpack(config, (err, stats) => {
     if(err)  {
-      throw new gutil.PluginError("webpack", err);
+      throw new gutil.PluginError('webpack', err);
     }
 
-    gutil.log("[webpack]", stats.toString({
+    gutil.log('[webpack]', stats.toString({
       colors: colorsSupported,
       chunks: false,
       errorDetails: true
@@ -66,15 +60,16 @@ gulp.task('webpack', ['clean'], (cb) => {
 });
 
 gulp.task('serve', () => {
-  const config = require('./webpack.dev.config');
-  config.entry.app = [
-    // this modules required to make HRM working
-    // it responsible for all this webpack magic
-    'webpack-hot-middleware/client?reload=true',
-    // application entry point
-  ].concat(paths.entry);
+  const config = merge(require('./webpack.dev.config'), {
+    entry: {
+      app: [
+        'webpack-hot-middleware/client?reload=true',
+        paths.entry[0]
+      ]
+    }
+  });
 
-  var compiler = webpack(config);
+  const compiler = webpack(config);
 
   serve({
     port: process.env.PORT || 3000,
@@ -97,30 +92,11 @@ gulp.task('serve', () => {
 
 gulp.task('watch', ['serve']);
 
-gulp.task('component', () => {
-  const cap = (val) => {
-    return val.charAt(0).toUpperCase() + val.slice(1);
-  };
-  const name = yargs.argv.name;
-  const parentPath = yargs.argv.parent || '';
-  const destPath = path.join(resolveToComponents(), parentPath, name);
-
-  return gulp.src(paths.blankTemplates)
-    .pipe(template({
-      name: name,
-      upCaseName: cap(name)
-    }))
-    .pipe(rename((path) => {
-      path.basename = path.basename.replace('temp', name);
-    }))
-    .pipe(gulp.dest(destPath));
-});
-
 gulp.task('clean', (cb) => {
   del([paths.dest]).then(function (paths) {
-    gutil.log("[clean]", paths);
+    gutil.log('[clean]', paths);
     cb();
-  })
+  });
 });
 
 gulp.task('default', ['watch']);
