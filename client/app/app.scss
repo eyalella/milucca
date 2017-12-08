@@ -1,4 +1,5 @@
 @import "common/common";
+@import "common/variables";
 
 app {
   height: 100%;
@@ -9,11 +10,13 @@ mega-menu {
   width: 100%;
   max-width: $site-width;
   background: $white;
-  z-index: $mega-menu-index;
-  left: 50%;
-  transform: translateX(-50%);
+  color: $black;
   @include viewport('lg') {
     position: absolute;
+    z-index: $mega-menu-index;
+    left: 50%;
+    transform: translateX(-50%);
+    top: $main-bar-height;
   }
 }
 

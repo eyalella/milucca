@@ -6,22 +6,35 @@ class TopBarController {
     this.megaMenuVisibale = false;
     this.menuIsVisibale = false;
     this.navigationItems = NAVIGATION;
+    this.megaMenuSectionIndex = -1;
   }
 
   toggleMenu() {
     this.menuIsVisibale = !this.menuIsVisibale;
   }
 
-  openMegaMenu(section) {
+  hoverOpenMegaMenu(section) {
     if (section === '#miluccalive') return;
     this.megaMenuSection = section;
     this.megaMenuVisibale = true;
     this._appService.showBackdrop = true;
   }
 
-  closeMegaMenu() {
+  hoverCloseMegaMenu() {
     this.megaMenuVisibale = false;
     this._appService.showBackdrop = false;
+  }
+
+  clickToggleMegaMenu(section) {
+    if (section === '#miluccalive') return;
+    const sectionIndex = NAVIGATION.indexOf(section);
+    if (this.megaMenuSectionIndex === sectionIndex && this.megaMenuVisibale) {
+      this.megaMenuVisibale = false;
+    } else {
+      this.megaMenuSectionIndex = sectionIndex;
+      this.megaMenuSection = section;
+      this.megaMenuVisibale = true;
+    }
   }
 }
 

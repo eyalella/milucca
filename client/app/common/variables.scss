@@ -1,3 +1,22 @@
+// MEDIA BREAKPOINTS
+$mb-small: 768px;
+$mb-medium: 992px;
+$mb-large: 1200px;
+
+// COLOR PALETTE
+$black: #000;
+$gray-a: #f4f4f4;
+$white: #fff;
+
+// Z-INDEX
+$mega-menu-index: 100;
+$mobile-menu-index: 100;
+
+// LAYOUT
+$site-width: 960px;
+$main-bar-height: 60px;
+
+
 // Breakpoints mixin
 @mixin viewport($media) {
   @if $media == sm {
@@ -18,19 +37,3 @@
     }
   }
 }
-
-// MEDIA BREAKPOINTS
-$mb-small: 768px;
-$mb-medium: 992px;
-$mb-large: 1200px;
-
-// COLOR PALETTE
-$black: #000;
-$white: #fff;
-
-// Z-INDEX
-$mega-menu-index: 100;
-$mobile-menu-index: 100;
-
-// LAYOUT
-$site-width: 960px;

@@ -10,11 +10,23 @@
       class="main-top-bar__nav align-items-center"
       ng-class="{'menu-is-visible': $ctrl.menuIsVisibale}">
       <a
+        class="main-top-bar__nav-item d-none d-lg-block"
         ng-repeat="navItem in $ctrl.navigationItems"
         href=""
-        ng-mouseleave="$ctrl.closeMegaMenu()"
-        ng-mouseenter="$ctrl.openMegaMenu(navItem)"
+        ng-mouseleave="$ctrl.hoverCloseMegaMenu()"
+        ng-mouseenter="$ctrl.hoverOpenMegaMenu(navItem)"
       >{{navItem}}</a>
+      <a
+        class="main-top-bar__mobile-nav-item d-block d-lg-none"
+        ng-repeat="navItem in $ctrl.navigationItems"
+        href=""
+        ng-click="$ctrl.clickToggleMegaMenu(navItem)"
+        style="order:{{$index+1}}"
+      >{{navItem}}</a>
+      <mega-menu
+        ng-show="$ctrl.megaMenuVisibale"
+        section="{{$ctrl.megaMenuSection}}"
+        style="order:{{$ctrl.megaMenuSectionIndex+1}}"></mega-menu>
     </nav>
     <h1 class="main-top-bar__mobile-logo d-flex d-lg-none align-items-center">MILUCCA</h1>
     <div class="main-top-bar__utils d-flex">
@@ -27,6 +39,3 @@
     </div>
   </div>
 </header>
-<mega-menu
-  ng-show="$ctrl.megaMenuVisibale"
-  section="{{$ctrl.megaMenuSection}}"></mega-menu>
