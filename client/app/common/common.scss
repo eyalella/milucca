@@ -20,9 +20,17 @@ ol, ul {
   list-style: none;
 }
 
+html[lang="heb"] {
+  direction: rtl;
+
+  .rtl-right {
+    text-align: right;
+  }
+}
+
 html, body {
   font-family: 'Lato', sans-serif;
-  height: 100%;
+  min-height: 100%;
   color: $black;
 }
 
@@ -34,6 +42,7 @@ button {
   color: inherit;
   cursor: pointer;
   padding: 0;
+  border-radius: 0;
 }
 
 a, a:hover {
@@ -63,7 +72,7 @@ h1.theme {
 
 .m-swiper-pagination {
   .swiper-pagination-bullet {
-    background: $black-b;
+    background: $black-two;
     box-shadow: 0 0 0 2px rgba(255,255,255,1), 0 0 0 4px rgba(0,0,0,0.2);
   }
 }

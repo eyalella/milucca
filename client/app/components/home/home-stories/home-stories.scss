@@ -9,8 +9,11 @@
   }
 
   &__story {
-    padding: 0 25px;
+    padding: 0 15px;
     flex: 1;
+    @include viewport('lg') {
+      padding: 0 25px;
+    }
   }
 
   &__content {

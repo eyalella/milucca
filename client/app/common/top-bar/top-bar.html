@@ -1,4 +1,4 @@
-<header class="main-top-bar d-flex justify-content-center">
+<section class="main-top-bar d-flex justify-content-center">
   <div class="content-wrapper d-flex justify-content-between">
     <h1 class="main-top-bar__logo d-none d-lg-flex align-items-center">MILUCCA</h1>
     <button
@@ -34,8 +34,17 @@
         <a href="" class="main-top-bar__social-icon">I</a>
         <a href="" class="main-top-bar__social-icon">Y</a>
       </div>
-      <button type="button" class="main-top-bar__change-language-button d-none d-lg-block">עברית</button>
+      <button
+        type="button"
+        class="main-top-bar__change-language-button d-none d-lg-block">
+          <span
+            ng-if="$ctrl.language === 'eng'"
+            ng-click="$ctrl.toggleLanguage('heb')">עברית</span>
+          <span
+            ng-if="$ctrl.language === 'heb'"
+            ng-click="$ctrl.toggleLanguage('eng')">english</span>
+      </button>
       <search class="d-flex align-items-center"></search>
     </div>
   </div>
-</header>
+</section>

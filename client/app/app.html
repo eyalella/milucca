@@ -1,11 +1,17 @@
-<div class="app">
-  <top-bar></top-bar>
-  <div class="app__page-wrapper d-flex flex-column align-items-center">
+<div
+  class="app"
+  ng-class="">
+  <header>
+    <top-bar></top-bar>
+  </header>
+  <main class="app__page-wrapper d-flex flex-column align-items-center">
     <div class="content-wrapper" ui-view></div>
     <div
       class="backdrop"
       ng-show="$ctrl.showBackdrop"
     ></div>
-  </div>
-  <mega-footer></mega-footer>
+  </main>
+  <footer>
+    <mega-footer></mega-footer>
+  </footer>
 </div>

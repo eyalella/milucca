@@ -1,1 +1,58 @@
 @import "../variables";
+@import "../utils";
+
+.mega-footer {
+  margin-top: 30px;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__toggle-button {
+    margin-bottom: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $black-two;
+    border: 1px solid $black-two;
+    padding: 12px 19px;
+  }
+
+  &__footer {
+    border-top: 1px solid $black;
+    margin: 0 15px;
+    padding: 20px 0;
+    font-size: 9px;
+    color: $greyish-brown;
+    text-transform: uppercase;
+  }
+
+  &__footer-item {
+    margin: 0 0 20px 0;
+    @include viewport('lg') {
+      margin: 0 20px 0 0;
+      [lang="heb"] & {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+
+  &__social {
+    margin: 0 0 20px 0;
+    @include viewport('lg') {
+      margin: 0 0 0 auto;
+      [lang="heb"] & {
+        margin: 0 auto 0 0;
+      }
+    }
+  }
+
+  &__legal {
+    margin-bottom: 20px;
+    @include viewport('lg') {
+      margin: 0 0 0 25px;
+      [lang="heb"] & {
+        margin: 0 25px 0 0;
+      }
+    }
+  }
+}

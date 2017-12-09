@@ -7,6 +7,11 @@ class TopBarController {
     this.menuIsVisibale = false;
     this.navigationItems = NAVIGATION;
     this.megaMenuSectionIndex = -1;
+    this.language = appService.language;
+  }
+
+  toggleLanguage() {
+    this.language = this._appService.toggleLanguage();
   }
 
   toggleMenu() {

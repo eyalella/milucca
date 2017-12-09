@@ -1,1 +1,28 @@
-<h1></h1>
+<section class="mega-footer d-flex flex-column align-items-center">
+  <div class="mega-footer__header">
+    <h1>MILUCCA</h1>
+  </div>
+  <div class="content-wrapper">
+    <div class="mega-footer_sections d-flex flex-column align-items-center">
+      <button
+        type="button"
+        class="mega-footer__toggle-button"
+        ng-click="$ctrl.toggleFooterSections()">close categories footer</button>
+      <div ng-show="$ctrl.footerSectionsVisible">Sections</div>
+    </div>
+    <div class="mega-footer__footer d-flex flex-column flex-lg-row align-items-center">
+      <a
+        href=""
+        ng-repeat="menuItem in $ctrl.footerMenu"
+        class="mega-footer__footer-item">{{menuItem}}</a>
+      <div class="mega-footer__social">
+        <a href="">Y</a>
+        <a href="">I</a>
+      </div>
+      <div class="mega-footer__legal">
+        <a href="">Legal note</a>
+        <a href="">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</section>
