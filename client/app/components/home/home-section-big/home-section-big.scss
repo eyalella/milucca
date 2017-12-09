@@ -1,0 +1,57 @@
+@import '../../../common/variables';
+@import '../../../common/utils';
+
+.home-section-big {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    padding-left: 15px;
+    @include viewport('lg') {
+      padding: 25px 0 0 80px;
+    }
+    h1 {
+      font-size: 45px;
+      line-height: 77px;
+      margin-bottom: 30px;
+      padding: 0 25px 0 10px;
+      @include viewport('lg') {
+        font-size: 75px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__text {
+    max-width: 400px;
+    padding-right: 15px;
+    @include viewport('lg') {
+      margin: 40px 80px;
+    }
+    h2 {
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 19px;
+      color: $warm-gray;
+      @include viewport('lg') {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: 330px;
+    background: $gray;
+    margin-bottom: 45px;
+    @include viewport('lg') {
+      width: 290px;
+      position: absolute;
+    }
+  }
+}

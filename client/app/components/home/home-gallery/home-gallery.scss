@@ -1,0 +1,25 @@
+@import '../../../common/variables';
+@import '../../../common/utils';
+
+.home-gallery {
+  height: 440px;
+  display: block;
+  @include viewport('lg') {
+    height: 420px;
+  }
+
+  .swiper-container {
+    padding-bottom: 30px;
+  }
+
+  .swiper-slide {
+    background: $gray;
+  }
+
+  .swiper-pagination {
+    @include viewport('lg') {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

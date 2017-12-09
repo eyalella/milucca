@@ -6,6 +6,10 @@
   background-color: $black;
   color: $white;
 
+  &__logo, &__mobile-logo {
+    font-size: 18px;
+  }
+
   &__nav {
     text-transform: uppercase;
     display: none;

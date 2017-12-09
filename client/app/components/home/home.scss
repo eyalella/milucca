@@ -1,27 +1,11 @@
-@import '../../common/variables';
 @import '../../common/utils';
 
 .home {
   &__gallery {
-    height: 440px;
+    margin-bottom: 40px;
     display: block;
     @include viewport('lg') {
-      height: 420px;
-    }
-
-    .swiper-container {
-      padding-bottom: 30px;
-    }
-
-    .swiper-slide {
-      background: $gray;
-    }
-
-    .swiper-pagination {
-      @include viewport('lg') {
-        display: flex;
-        justify-content: flex-end;
-      }
+      margin-bottom: 25px;
     }
   }
 }

@@ -1,0 +1,40 @@
+@import '../../../common/variables';
+@import '../../../common/utils';
+
+.home-stories {
+  &__stories {
+    @include viewport('lg') {
+      padding: 0 55px;
+    }
+  }
+
+  &__story {
+    padding: 0 25px;
+    flex: 1;
+  }
+
+  &__content {
+    padding: 10px 15px 15px;
+    &.inverse {
+      @include viewport('lg') {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 13px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 250px;
+    background: $gray;
+  }
+}

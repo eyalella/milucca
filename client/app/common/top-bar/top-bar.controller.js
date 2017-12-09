@@ -11,6 +11,7 @@ class TopBarController {
 
   toggleMenu() {
     this.menuIsVisibale = !this.menuIsVisibale;
+    this._appService.showBackdrop = !this._appService.showBackdrop;
   }
 
   hoverOpenMegaMenu(section) {

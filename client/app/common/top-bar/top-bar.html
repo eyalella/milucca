@@ -8,12 +8,12 @@
     >Mobile Nav</button>
     <nav
       class="main-top-bar__nav align-items-center"
-      ng-class="{'menu-is-visible': $ctrl.menuIsVisibale}">
+      ng-class="{'menu-is-visible': $ctrl.menuIsVisibale}"
+      ng-mouseleave="$ctrl.hoverCloseMegaMenu()">
       <a
         class="main-top-bar__nav-item d-none d-lg-block"
         ng-repeat="navItem in $ctrl.navigationItems"
         href=""
-        ng-mouseleave="$ctrl.hoverCloseMegaMenu()"
         ng-mouseenter="$ctrl.hoverOpenMegaMenu(navItem)"
       >{{navItem}}</a>
       <a
