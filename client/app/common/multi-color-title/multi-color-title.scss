@@ -1,0 +1,20 @@
+@import "../variables";
+@import "../utils";
+
+.multi-color-title {
+  font-size: 50px;
+  font-weight: bold;
+  @include viewport('lg') {
+    font-size: 43px;
+  }
+
+  &__first-line {
+    color: $greyish;
+    text-transform: uppercase;
+  }
+
+  &__second-line {
+    color: $black;
+    text-transform: uppercase;
+  }
+}

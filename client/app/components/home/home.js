@@ -5,13 +5,15 @@ import homeGalleryComponent from './home-gallery/home-gallery';
 import homeSectionBig from './home-section-big/home-section-big';
 import homeStories from './home-stories/home-stories';
 import homeMyChoice from './home-my-choice/home-my-choice';
+import homeLooks from './home-looks/home-looks';
 
 let homeModule = angular.module('home', [
   uiRouter,
   homeGalleryComponent,
   homeSectionBig,
   homeStories,
-  homeMyChoice
+  homeMyChoice,
+  homeLooks
 ]);
 
 homeModule.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
