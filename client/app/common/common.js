@@ -5,6 +5,7 @@ import MegaMenu from './mega-menu/mega-menu';
 import MegaMenuCatalog from './mega-menu-catalog/mega-menu-catalog';
 import MegaFooter from './mega-footer/mega-footer';
 import SocialFeed from './social-feed/social-feed';
+import catalogItem from './catalog-item/catalog-item';
 
 let commonModule = angular.module('app.common', [
   TopBar,
@@ -12,7 +13,8 @@ let commonModule = angular.module('app.common', [
   MegaMenu,
   MegaMenuCatalog,
   MegaFooter,
-  SocialFeed
+  SocialFeed,
+  catalogItem,
 ]).name;
 
 export default commonModule;

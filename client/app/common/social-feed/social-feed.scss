@@ -11,10 +11,22 @@
     width: calc(100% - 30px);
     margin-bottom: 30px;
     display: block;
+    @include viewport('lg') {
+      width: 100%;
+    }
   }
 
   &__wrapper {
     width: 100%;
+  }
+
+  &__content {
+    @include viewport('lg') {
+      margin-right: 45px;
+      [lang="heb"] & {
+        margin: 0 0 0 45px;
+      }
+    }
   }
 
   &__title {
@@ -32,6 +44,9 @@
     margin-bottom: 20px;
     @include viewport('lg') {
       text-align: left;
+      [lang="heb"] & {
+        text-align: right;
+      }
     }
   }
 
@@ -43,11 +58,18 @@
     width: 100%;
     padding: 0 10px;
     margin-bottom: 35px;
+    @include viewport('lg') {
+      flex: 1;
+      padding: 0;
+    }
   }
 
   &__gallery-item {
     width: 50%;
     padding: 5px;
+    @include viewport('lg') {
+      flex: 0 0 33%;
+    }
   }
 
   &__gallery-item-image {
