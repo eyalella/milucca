@@ -1,6 +1,9 @@
 <section class="main-top-bar d-flex justify-content-center">
   <div class="content-wrapper d-flex justify-content-between">
-    <h1 class="main-top-bar__logo d-none d-lg-flex align-items-center">MILUCCA</h1>
+    <h1
+      class="main-top-bar__logo d-none d-lg-flex align-items-center"
+      ui-sref="home"
+    >MILUCCA</h1>
     <button
       type="button"
       class="main-top-bar__mobile-menu-trigger d-block d-lg-none"
@@ -13,7 +16,7 @@
       <a
         class="main-top-bar__nav-item d-none d-lg-block"
         ng-repeat="navItem in $ctrl.navigationItems"
-        href=""
+        ui-sref="{{$ctrl.NAVIGATION_TO_ROUTE[navItem]}}"
         ng-mouseenter="$ctrl.hoverOpenMegaMenu(navItem)"
       >{{navItem}}</a>
       <a
@@ -28,7 +31,9 @@
         section="{{$ctrl.megaMenuSection}}"
         style="order:{{$ctrl.megaMenuSectionIndex+1}}"></mega-menu>
     </nav>
-    <h1 class="main-top-bar__mobile-logo d-flex d-lg-none align-items-center">MILUCCA</h1>
+    <h1
+      class="main-top-bar__mobile-logo d-flex d-lg-none align-items-center"
+      ui-sref="home">MILUCCA</h1>
     <div class="main-top-bar__utils d-flex">
       <div class="main-top-bar__social-icons d-none d-lg-flex align-items-center">
         <a href="" class="main-top-bar__social-icon">I</a>

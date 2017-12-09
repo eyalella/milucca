@@ -1,4 +1,4 @@
-const NAVIGATION = ['catalog', 'about milucca', 'my choice', 'looks', '#miluccalive'];
+import { NAVIGATION, NAVIGATION_TO_ROUTE } from '../constants';
 
 class TopBarController {
   constructor(appService) { 'ngInject';
@@ -6,6 +6,7 @@ class TopBarController {
     this.megaMenuVisibale = false;
     this.menuIsVisibale = false;
     this.navigationItems = NAVIGATION;
+    this.NAVIGATION_TO_ROUTE = NAVIGATION_TO_ROUTE;
     this.megaMenuSectionIndex = -1;
     this.language = appService.language;
   }

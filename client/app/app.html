@@ -4,14 +4,16 @@
   <header>
     <top-bar></top-bar>
   </header>
-  <main class="app__page-wrapper d-flex flex-column align-items-center">
-    <div class="content-wrapper" ui-view></div>
+  <div>
     <div
       class="backdrop"
       ng-show="$ctrl.showBackdrop"
     ></div>
-  </main>
-  <footer>
-    <mega-footer></mega-footer>
-  </footer>
+    <main class="app__page-wrapper d-flex flex-column align-items-center">
+      <div class="content-wrapper" ui-view></div>
+    </main>
+    <footer>
+      <mega-footer></mega-footer>
+    </footer>
+  </div>
 </div>
