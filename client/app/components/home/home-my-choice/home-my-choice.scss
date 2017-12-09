@@ -1,2 +1,12 @@
 @import '../../../common/variables';
 @import '../../../common/utils';
+
+.home-my-choice {
+  &__item {
+    margin-bottom: 25px;
+    @include viewport('lg') {
+      flex: 0 0 25%;
+      padding: 0 15px;
+    }
+  }
+}

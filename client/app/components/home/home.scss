@@ -12,5 +12,8 @@
   &__my-choice {
     margin-top: 100px;
     display: block;
+    @include viewport('lg') {
+      margin: 100px -15px 0;
+    }
   }
 }
