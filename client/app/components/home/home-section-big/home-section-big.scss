@@ -38,7 +38,7 @@
     p {
       font-size: 16px;
       line-height: 19px;
-      color: $warm-gray;
+      color: $warm-grey;
       @include viewport('lg') {
         font-size: 13px;
       }
@@ -48,7 +48,7 @@
   &__image {
     width: 50%;
     height: 330px;
-    background: $gray;
+    background: $grey;
     margin-bottom: 45px;
     @include viewport('lg') {
       width: 290px;
