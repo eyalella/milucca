@@ -7,6 +7,7 @@ import MegaFooter from './mega-footer/mega-footer';
 import SocialFeed from './social-feed/social-feed';
 import CatalogItem from './catalog-item/catalog-item';
 import MultiColorTitle from './multi-color-title/multi-color-title';
+import RelatedProducts from './related-products/related-products';
 
 let commonModule = angular.module('app.common', [
   TopBar,
@@ -16,7 +17,8 @@ let commonModule = angular.module('app.common', [
   MegaFooter,
   SocialFeed,
   CatalogItem,
-  MultiColorTitle
+  MultiColorTitle,
+  RelatedProducts
 ]).name;
 
 export default commonModule;

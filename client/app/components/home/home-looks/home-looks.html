@@ -29,11 +29,5 @@
     </swiper>
   </div>
   <div class="home-looks__look-photo d-flex align-items-center justify-content-center">{{$ctrl.activeLook}}</div>
-  <div class="home-looks__related-products">
-    <h5 class="home-looks__related-products-title">RELATED PRODUCTS</h5>
-    <p class="home-looks__related-products-text running-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolor.</p>
-    <button type="button" class="home-looks__related-products-action cta-button">SEE whole set</button>
-    <button type="button" class="home-looks__related-products-secondary-action secondary-button">SOME HOW-TO TIPS!</button>
-  </div>
+  <related-products product-name="{{$ctrl.activeLook}}"></related-products>
 </section>
