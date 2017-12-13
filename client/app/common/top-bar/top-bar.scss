@@ -5,10 +5,18 @@
   height: $main-bar-height;
   background-color: $black;
   color: $white;
+  position: relative;
 
   &__logo, &__mobile-logo {
     font-size: 18px;
     cursor: pointer;
+  }
+
+  &__mobile-menu-trigger {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
   }
 
   &__nav {
