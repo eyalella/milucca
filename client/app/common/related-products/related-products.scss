@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../utils';
 
 .related-products {
   padding: 0 15px;
@@ -21,9 +22,21 @@
     width: 100%;
     background: $grey;
     margin-bottom: 30px;
+    @include viewport('lg') {
+      height: 130px;
+    }
   }
 
   &__action {
     margin-bottom: 5px;
+    @include viewport('lg') {
+      font-size: 12px;
+    }
+  }
+
+  &__secondary-action {
+    @include viewport('lg') {
+      font-size: 12px;
+    }
   }
 }

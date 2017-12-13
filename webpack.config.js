@@ -7,7 +7,7 @@ module.exports = {
     loaders: [
       {
         test: /\.html$/,
-        use: {loader: 'raw-loader'}
+        use: { loader: 'raw-loader' }
       },
       {
         test: /\.js$/,
@@ -47,7 +47,31 @@ module.exports = {
             }
           ]
         })
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.woff(2)?(\?[a-z0-9]+)?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+      }, {
+        test: /\.(ttf|eot|svg)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader'
+      },
     ]
   },
   plugins: [

@@ -1,3 +1,5 @@
+import './third-party.scss';
+
 import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
 import Common from './common/common';

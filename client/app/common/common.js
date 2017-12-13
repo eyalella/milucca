@@ -8,6 +8,7 @@ import SocialFeed from './social-feed/social-feed';
 import CatalogItem from './catalog-item/catalog-item';
 import MultiColorTitle from './multi-color-title/multi-color-title';
 import RelatedProducts from './related-products/related-products';
+import LooksSlider from './looks-slider/looks-slider';
 
 let commonModule = angular.module('app.common', [
   TopBar,
@@ -18,7 +19,8 @@ let commonModule = angular.module('app.common', [
   SocialFeed,
   CatalogItem,
   MultiColorTitle,
-  RelatedProducts
+  RelatedProducts,
+  LooksSlider
 ]).name;
 
 export default commonModule;

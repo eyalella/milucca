@@ -1,0 +1,27 @@
+<div class="looks-slider d-flex flex-column">
+  <h2 class="looks-slider__title theme">Looks</h2>
+  <div class="looks-slider__mobile-slider d-flex flex-column">
+    <h3 class="looks-slider__current-look-mobile-title d-lg-none">Current look</h3>
+    <swiper
+      slides-per-view="{{$ctrl.slidesPerView}}"
+      centered-slides="{{$ctrl.centeredSlides}}"
+      on-slide-change-end="$ctrl.onSlideChangeEnd()"
+      run-callbacks-on-init="false"
+      direction="vertical"
+      loop="true"
+      breakpoints="{{$ctrl.breakpoints}}"
+    >
+      <slides>
+        <slide
+          class="theme"
+          ng-repeat="look in $ctrl.looks">
+          <h3 class="looks-slider__current-look-title running-text-font">Current look</h3>
+          <span>{{look.name}}</span>
+        </slide>
+      </slides>
+      <prev
+        class="looks-slider__arrow icon-arrow-down d-none d-lg-flex align-items-center justify-content-center"></prev>
+      <next class="looks-slider__arrow icon-arrow-up d-none d-lg-flex align-items-center justify-content-center"></next>
+    </swiper>
+  </div>
+</div>

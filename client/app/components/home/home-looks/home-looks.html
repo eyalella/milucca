@@ -1,5 +1,5 @@
-<section class="home-looks content-wrapper">
-  <div class="home-looks__top-section d-flex flex-column flex-lg-row">
+<section class="home-looks content-wrapper d-flex flex-column flex-lg-row flex-lg-wrap">
+  <div class="home-looks__top-section d-flex flex-column flex-lg-row align-items-center">
     <h1>
       <multi-color-title>
         <first-line>looks &</first-line>
@@ -12,22 +12,11 @@
     </div>
   </div>
 
-  <h2 class="home-looks__looks-title theme theme">Looks</h2>
-  <div class="home-looks__mobile-looks-slider">
-    <h4 class="home-looks__current-look-title">Current look</h4>
-    <swiper
-      slides-per-view="3"
-      centered-slides="true"
-      on-slide-change-end="$ctrl.onSlideChange"
-      run-callbacks-on-init="false">
-      <slides>
-        <slide
-          class="theme"
-          ng-repeat="look in $ctrl.looks">{{look.name}}
-        </slide>
-      </slides>
-    </swiper>
-  </div>
+  <looks-slider
+    looks="$ctrl.looks"
+    slides-per-view="4"
+    on-slide-change-end="$ctrl.onSlideChange"
+    centered-slides="true"></looks-slider>
   <div class="home-looks__look-photo d-flex align-items-center justify-content-center">{{$ctrl.activeLook}}</div>
   <related-products product-name="{{$ctrl.activeLook}}"></related-products>
 </section>
