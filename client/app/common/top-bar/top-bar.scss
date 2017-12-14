@@ -6,7 +6,6 @@
   background-color: $black;
   color: $white;
   position: relative;
-  font-family: 'gill-sans', sans-serif;
 
   &__logo, &__mobile-logo {
     font-size: 18px;
@@ -21,6 +20,7 @@
   }
 
   &__nav {
+    font-family: 'gill-sans-pro', sans-serif;
     text-transform: uppercase;
     display: none;
     position: absolute;
@@ -30,6 +30,7 @@
     flex-direction: column;
     color: $black;
     width: 100%;
+    font-size: 18px;
 
     @include viewport('lg') {
       display: flex;
@@ -54,6 +55,9 @@
         padding: 0;
         width: auto;
         background: transparent;
+      }
+      &:hover {
+        border-bottom: 1px solid $warm-grey;
       }
     }
 
