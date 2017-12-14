@@ -3,12 +3,13 @@
     <h1
       class="main-top-bar__logo d-none d-lg-flex align-items-center"
       ui-sref="home"
-    >MILUCCA</h1>
+    ><img src="app/assets/images/logo.svg" alt=""></h1>
     <button
       type="button"
       class="icon-mobile-menu main-top-bar__mobile-menu-trigger d-block d-lg-none"
       ng-click="$ctrl.toggleMenu()"
     ></button>
+
     <nav
       class="main-top-bar__nav align-items-center"
       ng-class="{'menu-is-visible': $ctrl.mobileMenuIsVisibale}"
@@ -31,13 +32,14 @@
         section="{{$ctrl.megaMenuSection}}"
         style="order:{{$ctrl.megaMenuSectionIndex+1}}"></mega-menu>
     </nav>
+
     <h1
       class="main-top-bar__mobile-logo d-flex d-lg-none align-items-center"
       ui-sref="home"><img src="app/assets/images/mobile-logo.svg" alt=""></h1>
-    <div class="main-top-bar__utils d-flex">
+    <div class="main-top-bar__utils d-flex align-items-center">
       <div class="main-top-bar__social-icons d-none d-lg-flex align-items-center">
-        <a href="" class="main-top-bar__social-icon">I</a>
-        <a href="" class="main-top-bar__social-icon">Y</a>
+        <a href="" class="icon-youtube main-top-bar__social-icon"></a>
+        <a href="" class="icon-instagram main-top-bar__social-icon"></a>
       </div>
       <button
         type="button"

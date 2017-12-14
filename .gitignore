@@ -8,4 +8,5 @@ dist/
 workspace.xml
 .idea
 eyal.xml
-workspace.xml
+client/app/fonts
+design

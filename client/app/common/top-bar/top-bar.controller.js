@@ -4,7 +4,7 @@ class TopBarController {
   constructor(appService) { 'ngInject';
     this._appService = appService;
     this.megaMenuVisibale = false;
-    this.mobileMenuIsVisibale = false;
+    this.mobileMenuIsVisible = false;
     this.navigationItems = NAVIGATION;
     this.NAVIGATION_TO_ROUTE = NAVIGATION_TO_ROUTE;
     this.megaMenuSectionIndex = -1;
@@ -16,8 +16,8 @@ class TopBarController {
   }
 
   toggleMenu() {
-    this._appService.showBackdrop = !this.mobileMenuIsVisibale;
-    this.mobileMenuIsVisibale = !this.mobileMenuIsVisibale;
+    this._appService.showBackdrop = !this.mobileMenuIsVisible;
+    this.mobileMenuIsVisible = !this.mobileMenuIsVisible;
   }
 
   hoverOpenMegaMenu(section) {

@@ -1,5 +1,13 @@
 @font-face {
-  font-family: 'MyWebFont';
-  src:  url('fonts/') format('woff2'),
-        url('myfont.woff') format('woff');
+    font-family: 'gill-sans';
+    src: url('./fonts/GillSansMTPro-Condensed.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'almoni-dl';
+    src: url('./fonts/almoni-dl-aaa-300.woff') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+

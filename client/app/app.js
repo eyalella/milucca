@@ -1,4 +1,6 @@
+// Third party must be loaded before all components
 import './third-party.scss';
+import './fonts.scss';
 
 import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';

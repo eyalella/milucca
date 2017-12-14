@@ -6,6 +6,7 @@
   background-color: $black;
   color: $white;
   position: relative;
+  font-family: 'gill-sans', sans-serif;
 
   &__logo, &__mobile-logo {
     font-size: 18px;
@@ -30,6 +31,15 @@
     color: $black;
     width: 100%;
 
+    @include viewport('lg') {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      color: $white;
+      width: auto;
+      margin: 0 auto 0 40px;
+    }
+
     &.menu-is-visible {
       display: flex;
     }
@@ -52,14 +62,15 @@
         margin-right: 25px;
       }
     }
+  }
 
-    @include viewport('lg') {
-      display: flex;
-      position: static;
-      flex-direction: row;
-      color: $white;
-      width: auto;
-      margin: 0 auto 0 40px;
-    }
+  &__social-icon {
+    margin-right: 10px;
+  }
+
+  &__change-language-button {
+    font-family: 'almoni-dl', sans-serif;
+    border-bottom: 1px solid $warm-grey;
+    padding: 5px 0;
   }
 }
