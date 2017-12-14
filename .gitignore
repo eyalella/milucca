@@ -7,6 +7,6 @@ node_modules
 dist/
 workspace.xml
 .idea
-eyal.xml
-client/app/fonts
 design
+
+client/app/fonts
