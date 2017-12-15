@@ -1,18 +1,23 @@
 <section class="main-top-bar d-flex justify-content-center">
   <div class="content-wrapper d-flex justify-content-center justify-content-lg-between">
+
+    <!-- Desktop Logo-->
     <h1
       class="main-top-bar__logo d-none d-lg-flex align-items-center"
       ui-sref="home"
-    ><img src="app/assets/images/logo.svg" alt=""></h1>
+    ><img src="assets/images/logo.svg" alt=""></h1>
+
+    <!-- Mobile menu trigger -->
     <button
       type="button"
       class="icon-mobile-menu main-top-bar__mobile-menu-trigger d-block d-lg-none"
       ng-click="$ctrl.toggleMenu()"
     ></button>
 
+    <!-- Desktop Site Navigation -->
     <nav
       class="main-top-bar__nav align-items-center"
-      ng-class="{'menu-is-visible': $ctrl.mobileMenuIsVisibale}"
+      ng-class="{'menu-is-visible': $ctrl.mobileMenuIsVisible}"
       ng-mouseleave="$ctrl.hoverCloseMegaMenu()">
       <a
         class="main-top-bar__nav-item d-none d-lg-block"
@@ -28,14 +33,17 @@
         style="order:{{$index+1}}"
       >{{navItem}}</a>
       <mega-menu
-        ng-show="$ctrl.megaMenuVisibale"
+        ng-show="$ctrl.megaMenuVisible"
         section="{{$ctrl.megaMenuSection}}"
         style="order:{{$ctrl.megaMenuSectionIndex+1}}"></mega-menu>
     </nav>
 
+    <!-- Mobile Logo -->
     <h1
       class="main-top-bar__mobile-logo d-flex d-lg-none align-items-center"
-      ui-sref="home"><img src="app/assets/images/mobile-logo.svg" alt=""></h1>
+      ui-sref="home"><img src="assets/images/mobile-logo.svg" alt="">
+    </h1>
+
     <div class="main-top-bar__utils d-flex align-items-center">
       <div class="main-top-bar__social-icons d-none d-lg-flex align-items-center">
         <a href="" class="icon-youtube main-top-bar__social-icon"></a>

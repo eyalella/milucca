@@ -1,18 +1,23 @@
-@import '../variables';
-@import '../utils';
+@import '../../variables';
+@import '../../utils';
 
 .mega-menu-catalogue {
+  @include viewport('lg') {
+    height: 450px;
+  }
+
   &__categories {
     border-right: 1px solid $black;
     padding: 15px;
     flex: 45;
     background-color: $grey;
     @include viewport('lg') {
-      flex: 2;
+      flex: 3;
       background-color: $white;
       padding: 25px;
     }
   }
+
   &__category {
     font-size: 21px;
     text-transform: uppercase;
@@ -20,23 +25,52 @@
       font-size: 18px;
     }
   }
+
   &__sub-categories {
     padding: 25px;
     flex: 55;
+    text-transform: none;
     @include viewport('lg') {
-      flex: 5;
+      flex: 7;
       border-right: 1px solid $black;
     }
   }
+
+  &__sub-category {
+    margin-bottom: 20px;
+  }
+
   &__sub-category-title {
     font-size: 21px;
     text-transform: capitalize;
+    margin-bottom: 20px;
+    display: block;
   }
+
+  &__sub-category-items {
+    font-family: $gill-sans-pro-book;
+    font-size: 13px;
+  }
+
+  &__sub-category-item {
+    margin-bottom: 10px;
+  }
+
+  &__see-all {
+    width: 170px;
+    margin-top: auto;
+  }
+
   &__more-section {
     display: none;
     @include viewport('lg') {
+      padding: 20px 0;
       display: block;
-      flex: 3;
+      flex: 5;
     }
+  }
+
+  &__banner {
+    cursor: pointer;
   }
 }

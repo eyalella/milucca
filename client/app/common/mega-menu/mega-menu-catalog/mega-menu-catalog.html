@@ -1,0 +1,33 @@
+<div class="mega-menu-catalogue d-flex">
+  <div class="mega-menu-catalogue__categories">
+    <a
+      ng-repeat="catalogSection in ::$ctrl.megaMenuCatalog"
+      ui-sref="{{::catalogSection.url}}"
+      class="mega-menu-catalogue__category"
+      ng-mouseenter="$ctrl.setActiveCategory(catalogSection.id)">
+      {{::catalogSection.name}}
+    </a>
+  </div>
+  <div class="mega-menu-catalogue__sub-categories d-flex flex-column">
+    <div class="d-flex flex-column flex-wrap">
+      <div class="mega-menu-catalogue__sub-category" ng-repeat="subSection in $ctrl.activeCategory.subItems">
+      <a
+        ui-sref="{{subSection.url}}"
+        class="mega-menu-catalogue__sub-category-title">{{subSection.name}}</a>
+      <div class="mega-menu-catalogue__sub-category-items d-flex flex-column">
+        <a
+          ng-repeat="item in subSection.subItems"
+          ui-sref="{{item.url}}"
+          class="mega-menu-catalogue__sub-category-item"
+        >{{item.name}}</a>
+      </div>
+    </div>
+    </div>
+    <div class="mega-menu-catalogue__see-all cta-button align-self-center">See all products</div>
+  </div>
+  <div class="mega-menu-catalogue__more-section d-flex flex-column align-items-center justify-content-around">
+    <img src="assets/images/my-choice-banner.jpg" alt="my choice" class="mega-menu-catalogue__banner">
+    <img src="assets/images/milucca-live-banner.jpg" alt="milucca live" class="mega-menu-catalogue__banner">
+    <img src="assets/images/looks-and-collections-banner.jpg" alt="looks and collections" class="mega-menu-catalogue__banner">
+  </div>
+</div>

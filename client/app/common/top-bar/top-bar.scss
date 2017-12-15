@@ -20,7 +20,7 @@
   }
 
   &__nav {
-    font-family: 'gill-sans-pro', sans-serif;
+    font-family: $gill-sans-pro, sans-serif;
     text-transform: uppercase;
     display: none;
     position: absolute;
@@ -73,7 +73,7 @@
   }
 
   &__change-language-button {
-    font-family: 'almoni-dl', sans-serif;
+    font-family: $almoni-dl, sans-serif;
     border-bottom: 1px solid $warm-grey;
     padding: 5px 0;
   }

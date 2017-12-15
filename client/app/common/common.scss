@@ -64,17 +64,20 @@ a, a:hover {
 }
 
 .cta-button {
-  background: $black-two;
+  background: url('/assets/images/cta-button-pattern.jpg') repeat;
   color: $white;
-  flex: 0 0 50%;
   position: relative;
   top: -3px;
   right: -3px;
   border: 1px solid $white;
   box-shadow: -3px 3px 0 0 $black;
   font-size: 12px;
-  padding: 10px;
+  padding: 13px 0 10px;
   text-align: center;
+  text-transform: uppercase;
+  font-stretch: condensed;
+  font-family: $gill-sans-pro;
+  cursor: pointer;
 }
 
 .secondary-button {

@@ -1,6 +1,4 @@
-@import url('http://fonts.googxleapis.com/css?family=Roboto');
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+//@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
+@import '~bootstrap/scss/bootstrap.scss';
 @import '~angular-ui-swiper/src/angular-ui-swiper.scss';
-@import 'assets/icomoon/style';
+@import '../assets/icomoon/style';
