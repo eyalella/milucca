@@ -1,0 +1,132 @@
+@import '../../utils';
+@import '../../variables';
+
+.filtered-results-filters {
+  padding: 0 15px;
+
+  &__title {
+    font-family: $gill-sans-pro;
+    font-stretch: condensed;
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+    border: 1px solid $white-three;
+    padding: 17px 15px 15px;
+    @include viewport('lg') {
+      border: none;
+      text-align: left;
+      padding: 0;
+    }
+
+    &.is-active {
+      text-align: left;
+      padding-left: 40px;
+    }
+  }
+
+  &__clear-all {
+    text-transform: uppercase;
+    color: $greyish;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  &__title-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--left {
+      left: 15px;
+    }
+
+    &--right {
+      right: 25px;
+    }
+  }
+
+  &__filters {
+    text-transform: uppercase;
+
+    // Override angular's hide for desktop
+    &.d-lg-block {
+      @include viewport('lg') {
+        display: block !important;
+      }
+    }
+  }
+
+  &__filter-title {
+    font-family: $gill-sans-pro;
+    font-stretch: condensed;
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+    border: 1px solid $white-three;
+    padding: 17px 15px 15px 40px;
+    color: $greyish;
+
+    &.is-open {
+      border-bottom-color: $black;
+      color: $black;
+    }
+  }
+
+  &__filter-title-text {
+    margin-top: 5px;
+    display: block;
+  }
+
+  &__filter-count {
+    color: $black;
+    font-size: 12px;
+    margin-left: auto;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: sans-serif;
+  }
+
+  &__filter-title-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+
+  &__filter-options {
+    background-color: $white-four;
+    padding: 20px 30px;
+    color: $greyish;
+  }
+
+  &__filter-option {
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    text-align: left;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &.active {
+      color: $black;
+
+      .filtered-results-filters__filter-option-text {
+        border-bottom-color: $black;
+      }
+    }
+  }
+
+  &__filter-option-text {
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+  }
+
+  &__filter-option-icon {
+    margin-left: 10px;
+  }
+}

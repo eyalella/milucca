@@ -3,9 +3,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('#{$icomoon-font-path}/icomoon.ttf?sjpd2g') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?sjpd2g') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?sjpd2g#icomoon') format('svg');
+    url('#{$icomoon-font-path}/icomoon.ttf?c271dc') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?c271dc') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?c271dc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close-small {
+  &:before {
+    content: $icon-close-small;
+  }
+}
+.icon-minus-small {
+  &:before {
+    content: $icon-minus-small;
+  }
+}
+.icon-plus-small {
+  &:before {
+    content: $icon-plus-small;
+  }
+}
+.icon-arrow-right-small {
+  &:before {
+    content: $icon-arrow-right-small;
+  }
+}
+.icon-arrow-left-small {
+  &:before {
+    content: $icon-arrow-left-small;
+  }
+}
 .icon-arrow-down {
   &:before {
     content: $icon-arrow-down;

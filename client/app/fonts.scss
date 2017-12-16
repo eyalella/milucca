@@ -7,6 +7,14 @@
 }
 
 @font-face {
+    font-family: 'gill-sans-pro';
+    src: url('./fonts/GillSansMTPro-BoldExtCond.otf') format('opentype');
+    font-stretch: extra-condensed;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'gill-sans-pro-book';
     src: url('./fonts/GillSansMTPro-Book.otf') format('opentype');
     font-weight: normal;

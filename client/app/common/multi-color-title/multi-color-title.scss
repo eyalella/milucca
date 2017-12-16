@@ -3,7 +3,12 @@
 
 .multi-color-title {
   font-size: 50px;
+  font-family: $gill-sans-pro;
+  font-stretch: extra-condensed;
   font-weight: bold;
+  font-style: normal;
+  line-height: 1em;
+
   @include viewport('lg') {
     font-size: 43px;
   }

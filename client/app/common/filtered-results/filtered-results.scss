@@ -1,0 +1,45 @@
+@import '../../common/utils';
+@import '../../common/variables';
+
+.filtered-results {
+
+  &__background-title {
+    font-size: 150px;
+    color: $white-four;
+    position: absolute;
+    padding: 0 70px;
+    line-height: 1em;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  multi-color-title {
+    margin: 15px;
+    display: block;
+  }
+
+  filtered-results-filters {
+    width: 100%;
+    display: block;
+    @include viewport('lg') {
+      width: 220px;
+    }
+  }
+
+  &__results {
+    flex: 1;
+    padding-top: 100px;
+    catalog-item {
+      width: 100%;
+      padding: 15px;
+      @include viewport('lg') {
+        width: 33%;
+      }
+    }
+  }
+}

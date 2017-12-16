@@ -78,6 +78,13 @@ a, a:hover {
   font-stretch: condensed;
   font-family: $gill-sans-pro;
   cursor: pointer;
+  transition: all 0.1s linear;
+
+  &:hover {
+    box-shadow: 0 0 0 0 $black;
+    top: 0;
+    right: 0;
+  }
 }
 
 .secondary-button {

@@ -1,0 +1,76 @@
+<aside class="filtered-results-filters">
+
+  <!-- Mobile Filters Toggle-->
+  <button
+    ng-click="$ctrl.toggleFilters()"
+    type="button"
+    class="filtered-results-filters__title d-flex d-lg-none align-items-center"
+    ng-class="{'is-active': $ctrl.filtersVisibale}">
+    <spen
+      ng-show="$ctrl.filtersVisibale"
+      class="filtered-results-filters__title-icon filtered-results-filters__title-icon--left icon-arrow-left-small d-lg-none"
+    ></spen>
+    <span>Properties</span>
+    <span
+      ng-click="$ctrl.clearAllFilters()"
+      ng-if="$ctrl.getFilterCount('all') > 0 && $ctrl.filtersVisibale"
+      class="filtered-results-filters__clear-all">Clear filters</span>
+    <spen
+      ng-show="!$ctrl.filtersVisibale"
+      class="filtered-results-filters__title-icon filtered-results-filters__title-icon--right icon-arrow-right-small d-lg-none"
+    ></spen>
+  </button>
+
+  <!-- Desktop title -->
+  <p
+    class="filtered-results-filters__title d-none d-lg-flex align-items-center"
+    ng-class="{'is-active': $ctrl.filtersVisibale}">
+    <span>Properties</span>
+    <span
+      ng-click="$ctrl.clearAllFilters()"
+      class="filtered-results-filters__clear-all">Clear filters</span>
+  </p>
+
+  <!-- Filters -->
+  <div
+    class="filtered-results-filters__filters d-lg-block"
+    ng-show="$ctrl.filtersVisibale"
+  >
+    <div
+      ng-repeat="filter in $ctrl.filters"
+      class="filtered-results-filters__filter">
+
+      <!-- Filter Title -->
+      <div
+        class="filtered-results-filters__filter-title"
+        ng-class="{'is-open': $ctrl.filtersState[filter.name].isOpen}"
+        ng-click="$ctrl.toggleFilter(filter.name)"
+      >
+        <span
+          class="filtered-results-filters__filter-title-icon"
+          ng-class="{'icon-minus-small': $ctrl.filtersState[filter.name].isOpen, 'icon-plus-small': !$ctrl.filtersState[filter.name].isOpen}"
+        ></span>
+        <span class="filtered-results-filters__filter-title-text">{{filter.name}}</span>
+        <span class="filtered-results-filters__filter-count">({{$ctrl.getFilterCount(filter.name)}})</span>
+      </div>
+
+      <!-- Filter Options -->
+      <div
+        class="filtered-results-filters__filter-options"
+        ng-if="$ctrl.filtersState[filter.name].isOpen"
+      >
+        <button
+          type="button"
+          ng-repeat="option in filter.options"
+          ng-click="$ctrl.toggleFilterOption(filter.name, option)"
+          ng-class="{active: $ctrl.filtersState[filter.name].activeOptions.indexOf(option) > -1}"
+          class="filtered-results-filters__filter-option d-flex align-items-center">
+          <span class="filtered-results-filters__filter-option-text">{{option}}</span>
+          <span
+            ng-if="$ctrl.filtersState[filter.name].activeOptions.indexOf(option) > -1"
+            class="filtered-results-filters__filter-option-icon icon-close-small"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</aside>
