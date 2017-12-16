@@ -9,6 +9,7 @@ import Components from './components/components';
 import AppComponent from './app.component';
 import AppService from './app.service';
 import CatalogModel from './models/catalog.model';
+import FooterModel from './models/footer.model';
 
 import 'angular-ui-swiper';
 
@@ -23,4 +24,5 @@ angular.module('app', [
   }])
   .component('app', AppComponent)
   .service('appService', AppService)
-  .service('catalogModel', CatalogModel);
+  .service('catalogModel', CatalogModel)
+  .service('footerModel', FooterModel);

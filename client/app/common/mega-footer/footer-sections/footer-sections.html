@@ -1,0 +1,25 @@
+<section class="footer-sections d-flex flex-column flex-lg-row flex-lg-wrap">
+  <div
+    ng-repeat="footerSection in $ctrl.footerMenu"
+    class="footer-sections__section d-flex flex-column flex-lg-row">
+    <div class="footer-sections__section-main">
+      <p class="footer-sections__section-main-name">{{footerSection.name}}</p>
+      <p class="footer-sections__section-main-subtitle">{{footerSection.subtitle}}</p>
+      <a class="footer-sections__section-main-link">View all products</a>
+      <div class="footer-sections__section-main-image-wrapper">
+        <div class="footer-sections__section-main-image"></div>
+      </div>
+    </div>
+    <div class="footer-sections__section-breakdown d-flex flex-column">
+      <div
+        ng-repeat="footerItem in footerSection.fotterItems"
+        class="footer-sections__section-item d-flex flex-column">
+        <span class="footer-sections__section-title">{{footerItem.name}}</span>
+        <span
+          ng-repeat="item in footerItem.items"
+          class="footer-sections__section-item-link">{{item.name}}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

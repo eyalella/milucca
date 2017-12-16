@@ -1,0 +1,92 @@
+@import '../../utils';
+@import '../../variables';
+
+.footer-sections {
+  padding: 15px;
+
+  &__section {
+    width: 100%;
+    margin-bottom: 30px;
+    @include viewport('lg') {
+      width: 50%;
+    }
+  }
+
+  &__section-main {
+    width: 100%;
+    padding-right: 60px;
+    @include viewport('lg') {
+      width: 50%;
+    }
+  }
+
+  &__section-main-name {
+    font-family: $gill-sans-pro;
+    font-stretch: condensed;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__section-main-subtitle {
+    font-family: $gill-sans-pro-book;
+    font-size: 14px;
+    color: $warm-grey;
+    margin-bottom: 20px;
+    @include viewport('lg') {
+      font-size: 10px;
+    }
+  }
+
+  &__section-main-link {
+    font-family: $gill-sans-pro-book;
+    font-size: 14px;
+    color: $black-two;
+    text-transform: uppercase;
+    @include viewport('lg') {
+      font-size: 10px;
+    }
+  }
+
+  &__section-main-image-wrapper {
+    padding-top: 25px;
+    margin-top: 5px;
+    border-top: 1px solid $black;
+    width: 110px;
+    @include viewport('lg') {
+      width: 73px;
+    }
+  }
+
+  &__section-main-image {
+    height: 110px;
+    width: 100%;
+    background: $grey;
+    margin-bottom: 30px;
+    @include viewport('lg') {
+      height: 73px;
+    }
+  }
+
+  &__section-item {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+    font-family: $gill-sans-pro-book;
+    color: $greyish-brown;
+    @include viewport('lg') {
+      font-size: 10px;
+    }
+  }
+
+  &__section-title {
+    font-family: $gill-sans-mt-pro-medium;
+    color: $black-two;
+    margin-bottom: 10px;
+  }
+
+  &__section-item-link {
+    margin-bottom: 10px;
+  }
+}

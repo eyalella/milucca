@@ -1,9 +1,9 @@
-const footerMenu = ['catalog', 'about milucca', 'my choice', 'looks', '#millucalive', 'get in touch'];
+const footerBottomMenu = ['catalog', 'about milucca', 'my choice', 'looks', '#millucalive', 'get in touch'];
 
 class MegaFooterController {
   constructor() {
-    this.footerMenu = footerMenu;
-    this.footerSectionsVisible = false;
+    this.footerBottomMenu = footerBottomMenu;
+    this.footerSectionsVisible = true;
   }
 
   toggleFooterSections() {

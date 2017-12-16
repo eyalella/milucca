@@ -10,6 +10,10 @@
 
   &__header {
     margin-bottom: 30px;
+    background: url(/assets/images/double-zigzag.png) center repeat-x;
+    width: 100%;
+    text-align: center;
+    padding: 21px;
   }
 
   &__toggle-button {
@@ -19,6 +23,16 @@
     color: $black-two;
     border: 1px solid $black-two;
     padding: 12px 19px;
+    font-family: $gill-sans-pro-book;
+  }
+
+  &__toggle-button-icon {
+    margin-left: 5px;
+  }
+
+  footer-sections {
+    display: block;
+    width: 100%;
   }
 
   &__footer {
