@@ -1,6 +1,6 @@
 import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
-import aboutComponent from './about.component';
+import about from './about.component';
 
 let aboutModule = angular.module('about', [
   uiRouter
@@ -11,11 +11,11 @@ aboutModule.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $ur
 
   $stateProvider
     .state('about', {
-      url: '/',
+      url: '/about',
       component: 'about'
     });
 }]);
 
-aboutModule.component('about', aboutComponent);
+aboutModule.component('about', about);
 
 export default aboutModule.name;

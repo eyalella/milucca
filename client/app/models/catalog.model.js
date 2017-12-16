@@ -1,4 +1,4 @@
-const MOCK_DATA = {
+const MEGA_MENU = {
   custom: null,
   errorCode: 0,
   errorMessage: null,
@@ -8,7 +8,7 @@ const MOCK_DATA = {
         id: 1,
         name: 'MakeUp',
         level: 1,
-        url: 'catalog/category/1',
+        url: 'section/1',
         subItems: [
           {
             id: 2,
@@ -66,18 +66,70 @@ const MOCK_DATA = {
     ]
   }
 };
+const CATEGORY = {
+  custom: null,
+  errorCode: 0,
+  errorMessage: null,
+  body: {
+    title: 'Face',
+    subTitle: null,
+    description: null,
+    hashTag: null,
+    subCategories: [
+      {
+        id: 4,
+        name: 'Poweder',
+        level: 3,
+        url: null,
+        subItems: null
+      },
+      {
+        id: 5,
+        name: 'CC ace',
+        level: 3,
+        url: null,
+        subItems: null
+      }
+    ],
+    properties: [
+      {
+        id: 1,
+        name: 'Coverage',
+        properties: [
+          {
+            id: 6,
+            name: 'High',
+            properties: []
+          },
+          {
+            id: 8,
+            name: 'Light',
+            properties: []
+          }
+        ]
+      }
+    ]
+  }
+};
 
-class MegaMenuModel {
+class CatalogModel {
   constructor($timeout) {
     'ngInject';
     this._$timeout = $timeout;
   }
 
-  get megaMenuCatalog() {
+  get catalogMenuItems() {
     return this._$timeout(() => {
-      return MOCK_DATA.body.menuItems;
+      return MEGA_MENU.body.menuItems;
+    });
+  }
+
+  getCatalogCategory(id) {
+    return this._$timeout(() => {
+      console.log(`getting ${id}`);
+      return CATEGORY.body;
     });
   }
 }
 
-export default MegaMenuModel;
+export default CatalogModel;

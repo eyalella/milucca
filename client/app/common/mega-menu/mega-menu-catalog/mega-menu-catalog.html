@@ -1,10 +1,9 @@
 <div class="mega-menu-catalogue d-flex">
   <div class="mega-menu-catalogue__categories">
     <a
-      ng-repeat="catalogSection in ::$ctrl.megaMenuCatalog"
-      ui-sref="{{::catalogSection.url}}"
-      class="mega-menu-catalogue__category"
-      ng-mouseenter="$ctrl.setActiveCategory(catalogSection.id)">
+      ng-repeat="catalogSection in ::$ctrl.catalog"
+      ui-sref="section({id:{{catalogSection.id}}})"
+      class="mega-menu-catalogue__category d-flex align-items-center justify-content-start">
       {{::catalogSection.name}}
     </a>
   </div>
@@ -23,9 +22,9 @@
       </div>
     </div>
     </div>
-    <div class="mega-menu-catalogue__see-all cta-button align-self-center">See all products</div>
+    <div class="mega-menu-catalogue__see-all d-none d-lg-block cta-button align-self-center">See all products</div>
   </div>
-  <div class="mega-menu-catalogue__more-section d-flex flex-column align-items-center justify-content-around">
+  <div class="mega-menu-catalogue__more-section d-none d-lg-flex flex-column align-items-center justify-content-around">
     <img src="assets/images/my-choice-banner.jpg" alt="my choice" class="mega-menu-catalogue__banner">
     <img src="assets/images/milucca-live-banner.jpg" alt="milucca live" class="mega-menu-catalogue__banner">
     <img src="assets/images/looks-and-collections-banner.jpg" alt="looks and collections" class="mega-menu-catalogue__banner">

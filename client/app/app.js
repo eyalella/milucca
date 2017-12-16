@@ -8,6 +8,7 @@ import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
 import AppService from './app.service';
+import CatalogModel from './models/catalog.model';
 
 import 'angular-ui-swiper';
 
@@ -21,4 +22,5 @@ angular.module('app', [
     $locationProvider.html5Mode(true).hashPrefix('!');
   }])
   .component('app', AppComponent)
-  .service('appService', AppService);
+  .service('appService', AppService)
+  .service('catalogModel', CatalogModel);

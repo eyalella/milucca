@@ -1,0 +1,14 @@
+<div class="catalog-section d-flex flex-column align-items-center">
+  <catalog-section-title
+    title="{{$ctrl.pageData.title}}">
+  </catalog-section-title>
+  <nav class="catalog-section__subsection-nav content-wrapper d-flex flex-column flex-lg-row justify-content-center align-items-center">
+    <a
+      ng-repeat="subCategory in $ctrl.pageData.subCategories"
+      class="catalog-section__subsection-nav-item"
+      ui-sref="section({id:{{subCategory.id}}})">
+      {{subCategory.name}}
+    </a>
+  </nav>
+  <filtered-results class="content-wrapper"></filtered-results>
+</div>

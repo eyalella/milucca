@@ -88,6 +88,7 @@ a, a:hover {
 .content-wrapper {
   width: 100%;
   max-width: $site-width;
+  position: relative;
 }
 
 .backdrop {

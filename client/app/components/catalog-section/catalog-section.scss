@@ -1,0 +1,17 @@
+@import '../../common/variables';
+
+.catalog-section {
+
+  catalog-section-title {
+    width: 100%;
+  }
+
+  &__subsection-nav {
+    text-transform: uppercase;
+    color: $warm-grey;
+  }
+
+  &__subsection-nav-item {
+    margin: 25px;
+  }
+}
